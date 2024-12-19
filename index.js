@@ -14,9 +14,10 @@ const SECRET_KEY = "your_secret_key";
 
 // Middleware
 const corsOptions = {
-  origin:"https://moviesmate.onrender.com/", // Frontend URL
+  origin:"https://moviesmate.onrender.com", // Frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 };
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -166,4 +167,4 @@ app.use((err, req, res, next) => {
 
 // Server Port
 const PORT = 5002
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
