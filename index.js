@@ -14,7 +14,7 @@ const SECRET_KEY = "your_secret_key";
 
 // Middleware
 const corsOptions = {
-  origin:"http://localhost:3000", // Frontend URL
+  origin:"https://moviesmate.onrender.com/", // Frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
